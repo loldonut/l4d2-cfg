@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+set -x
+STEAM_COMMON_PATH="${HOME}/.local/share/Steam/steamapps/common"
+STEAM_CFG_PATH="${STEAM_COMMON_PATH}/Left 4 Dead 2/left4dead2/cfg"
+
+CFG_PATH="$(pwd)"
+
+ln -sf "${CFG_PATH}/autoexec.cfg" "${STEAM_CFG_PATH}/autoexec.cfg"
+ln -sf "${CFG_PATH}/binds.cfg" "${STEAM_CFG_PATH}/binds.cfg"
+
