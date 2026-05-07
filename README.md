@@ -4,7 +4,7 @@ My Left 4 Dead 2 config files
 
 ## Install Script (Linux Only)
 
-**Note: This symlinks to `$HOME/.local/share/Steam/steamapps/common/Left 4 Dead 2/left4dead2/cfg`, so Steam installed through flatpak won't work.**
+**Note:** This symlinks to `$HOME/.local/share/Steam/steamapps/common/Left 4 Dead 2/left4dead2/cfg`, so Steam installed through flatpak won't work.
 
 ```sh
 ./install
