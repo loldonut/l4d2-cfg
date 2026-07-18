@@ -9,7 +9,7 @@ if [[ ! -n "${SR_OLDVERSIONS_PATH}" ]]; then
 fi
 
 # Versions installed
-VERSIONS=$(find ${SR_OLDVERSIONS_PATH} -maxdepth 1 -type d -name "L4D2-v*")
+VERSIONS=$(find "${SR_OLDVERSIONS_PATH}" -maxdepth 1 -type d -name "L4D2-v*")
 
 link_cfgs() {
     ln -sf "${CFG_PATH}/autoexec.cfg" "${STEAM_CFG_PATH}/autoexec.cfg"
@@ -19,7 +19,7 @@ link_cfgs() {
 
     while IFS=' ' read -ra SR_PATHS; do
         for version_full_path in "${SR_PATHS[@]}"; do
-            version=$(basename ${version_full_path})
+            version=$(basename "${version_full_path}")
             sr_path="${SR_OLDVERSIONS_PATH}/${version}/Left 4 Dead 2/left4dead2/cfg"
             ln -sf "${CFG_PATH}/sr_autoexec.cfg" "${sr_path}/autoexec.cfg"
             ln -sf "${CFG_PATH}/sr_binds.cfg" "${sr_path}/binds.cfg"
